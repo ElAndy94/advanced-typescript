@@ -1,0 +1,14 @@
+{
+  "name": "Typescript-Course",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ElAndy94/advanced-typescript.git",
+  "author": "Andrew <andrewpeliza@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.5.3"
+  },
+  "scripts": {
+    "start": "lite-server"
+  }
+}
