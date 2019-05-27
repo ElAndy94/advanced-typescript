@@ -106,3 +106,40 @@ let finalValue = 'A string';
 if (typeof finalValue == 'number') {
   console.log('final value is a number');
 }
+
+// never type
+function neverReturns(): never {
+  throw new Error('An error!');
+}
+
+// Nullable Types
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+let canThisBeAny = null;
+canThisBeAny = 12;
+console.log(canThisBeAny);
+
+/**
+ * Exercise
+ */
+
+type BankAccount = { money: number; deposit: (val: number) => void };
+
+let bankAccount: BankAccount = {
+  money: 2000,
+  deposit(value: number): void {
+    this.money += value;
+  }
+};
+
+let myself: { name: string; bankAccount: BankAccount; hobbies: string[] } = {
+  name: 'Max',
+  bankAccount: bankAccount,
+  hobbies: ['Sports', 'Cooking']
+};
+
+myself.bankAccount.deposit(3000);
+
+console.log(myself);

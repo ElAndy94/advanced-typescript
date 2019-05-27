@@ -48,3 +48,64 @@ function multiply(value1, value2) {
     return value1 * value2;
 }
 console.log(multiply(20, 30));
+// function types
+let myMultiply;
+// myMultiply = sayHello;
+// myMultiply();
+myMultiply = multiply;
+console.log(myMultiply(5, 2));
+// objects
+let userData = {
+    name: 'Andrew',
+    age: 24
+};
+// userData = {
+//     a: 'hello',
+//     b: 22
+// }
+// complex object
+let complex = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+let complex2 = {
+    data: [100, 3.99, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// union types
+let myRealRealAge = 27;
+myRealRealAge = '27';
+// check types
+let finalValue = 'A string';
+if (typeof finalValue == 'number') {
+    console.log('final value is a number');
+}
+// never type
+function neverReturns() {
+    throw new Error('An error!');
+}
+// Nullable Types
+let canBeNull = 12;
+canBeNull = null;
+let canAlsoBeNull;
+canAlsoBeNull = null;
+let canThisBeAny = null;
+canThisBeAny = 12;
+console.log(canThisBeAny);
+let bankAccount = {
+    money: 2000,
+    deposit(value) {
+        this.money += value;
+    }
+};
+let myself = {
+    name: 'Max',
+    bankAccount: bankAccount,
+    hobbies: ['Sports', 'Cooking']
+};
+myself.bankAccount.deposit(3000);
+console.log(myself);
