@@ -85,3 +85,24 @@ let complex: { data: number[]; output: (all: boolean) => number[] } = {
     return this.data;
   }
 };
+
+// Declaring a custom type with Type Aliases
+type Complex = { data: number[]; output: (all: boolean) => number[] };
+
+let complex2: Complex = {
+  data: [100, 3.99, 10],
+
+  output: function(all: boolean): number[] {
+    return this.data;
+  }
+};
+
+// union types
+let myRealRealAge: string | number = 27;
+myRealRealAge = '27';
+
+// check types
+let finalValue = 'A string';
+if (typeof finalValue == 'number') {
+  console.log('final value is a number');
+}
