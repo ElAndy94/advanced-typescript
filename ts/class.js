@@ -61,3 +61,22 @@ class Helpers {
 Helpers.PI = 3.14;
 console.log(2 * Helpers.PI);
 console.log(Helpers.calcCircumference(8));
+// Abstract Classes
+class Project {
+    constructor() {
+        this.projectName = 'Default';
+        this.budget = 1000;
+    }
+    calcBudge() {
+        return this.budget * 2;
+    }
+}
+class ITProject extends Project {
+    changeName(name) {
+        this.projectName = name;
+    }
+}
+let newProject = new ITProject();
+console.log(newProject);
+newProject.changeName('Super IT Project');
+console.log(newProject);
