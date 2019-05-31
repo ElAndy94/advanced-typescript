@@ -1,21 +1,3 @@
-// let myName: string = 'Andrew';
-// let myAge: number = 24;
-// let anything: any;
-// anything = 12;
-
-// function controlMe(isTrue: boolean) {
-//   let result: number;
-//   if (isTrue) {
-//     result = 12;
-//   }
-//   result = 33;
-//   return result;
-// }
-
-// let & const
-// let variable = 'Test';
-// console.log(variable);
-
 // Default parameters
 console.log('Default parameters');
 const countdown = (start: number = 10): void => {

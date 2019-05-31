@@ -27,7 +27,7 @@ let testResults = [3.89, 2.99, 1.38];
 let [result1, result2, result3] = testResults;
 console.log(result1, result2, result3);
 // Exercise 6 - And a well-constructed object!
-let scientist = { firstName: 'Will', experience: 12 };
+let scientist = { firstName: 'Andy', experience: 12 };
 // let firstName = scientist.firstName;
 // let experience = scientist.experience;
 let { firstName: fName, experience: exp } = scientist;
