@@ -92,3 +92,23 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName('Super IT Project');
 console.log(newProject);
+
+//private contructors
+class OnlyOne {
+  private static instance: OnlyOne;
+
+  private constructor(public readonly name: string) {}
+
+  static getInstance() {
+    if (!OnlyOne.instance) {
+      OnlyOne.instance = new OnlyOne('The Only One');
+    }
+    return OnlyOne.instance;
+  }
+}
+
+// let wrong = new OnlyOne('The Only One');
+let right = OnlyOne.getInstance();
+console.log(right.name);
+// Read only added bottom code won't work ->
+// right.name = 'Something else';

@@ -80,3 +80,17 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName('Super IT Project');
 console.log(newProject);
+//private contructors
+class OnlyOne {
+    constructor(name) {
+        this.name = name;
+    }
+    static getInstance() {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The Only One');
+        }
+        return OnlyOne.instance;
+    }
+}
+let wrong = new OnlyOne('The Only One');
+let right = OnlyOne.getInstance();
