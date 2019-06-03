@@ -92,5 +92,8 @@ class OnlyOne {
         return OnlyOne.instance;
     }
 }
-let wrong = new OnlyOne('The Only One');
+// let wrong = new OnlyOne('The Only One');
 let right = OnlyOne.getInstance();
+console.log(right.name);
+// Read only added bottom code won't work ->
+// right.name = 'Something else';
