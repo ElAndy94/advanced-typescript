@@ -1,5 +1,7 @@
 interface NamedPerson {
   firstName: string;
+  age?: number;
+  [propName: string]: any;
 }
 
 function greetPerson(veryNewPerson: NamedPerson) {
@@ -12,8 +14,10 @@ function changeName(veryNewPerson: NamedPerson) {
 
 const veryNewPerson = {
   firstName: 'Andrew',
-  age: 27
+  age: 27,
+  hoobies: ['cooking', 'sports']
 };
 
-greetPerson(veryNewPerson);
+greetPerson({ firstName: 'Andrew', age: 27 });
 changeName(veryNewPerson);
+greetPerson(veryNewPerson);

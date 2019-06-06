@@ -1,13 +1,15 @@
 "use strict";
 function greetPerson(veryNewPerson) {
-    console.log('Hello, ' + veryNewPerson.name);
+    console.log('Hello, ' + veryNewPerson.firstName);
 }
 function changeName(veryNewPerson) {
-    veryNewPerson.name = 'Anna';
+    veryNewPerson.firstName = 'Anna';
 }
 const veryNewPerson = {
-    name: 'Andrew',
-    age: 27
+    firstName: 'Andrew',
+    age: 27,
+    hoobies: ['cooking', 'sports']
 };
-greetPerson(veryNewPerson);
+greetPerson({ firstName: 'Andrew', age: 27 });
 changeName(veryNewPerson);
+greetPerson(veryNewPerson);
